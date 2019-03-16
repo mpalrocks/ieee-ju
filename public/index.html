@@ -1,6 +1,7 @@
 	<!DOCTYPE html>
 	<html lang="zxx" class="no-js">
 	<head>
+		<META HTTP-EQUIV="PRAGMA" CONTENT="NO-CACHE">
 		<!-- Mobile Specific Meta -->
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 		<!-- Favicon-->
@@ -149,8 +150,8 @@
 							<a class="primary-btn" href="about.html">About Student Branch</a>
 							<a class="primary-btn" href="https://www.ieee.org//">ieee.org</a>
 						</div>
-						<div class="col-lg-4 col-md-12 home-about-right relative">
-							<form class="form-wrap" action="https://getform.io/f/f65e52c8-982a-4b0f-9a2e-5d9d8bd63ef1" method="POST">
+						<div class="col-lg-4 col-md-12 home-about-right relative" id="ping_section">
+							<form class="form-wrap" onsubmit="return submit_form();">
 								<h4 class="text-white pb-20">Leave a message for us!</h4>
 								<!--<div class="form-select" id="service-select"">
 									<select>
@@ -161,11 +162,11 @@
 										<option value="5">Service Four</option>
 									</select>
 								</div>-->								
-								<input type="text" class="form-control" placeholder="Name" name="name">
-								<input type="phone" class="form-control" placeholder="Phone Number" name="tel">
-								<input type="email" class="form-control" placeholder="Email Address" name="email">
-								<textarea name="message" id="" cols="30" rows="5" placeholder="Message" class="form-control" name="text"></textarea>
-								<button class="primary-btn">Ping!</button>
+								<input type="text" class="form-control" placeholder="Name" name="name" id="ping_name">
+								<input type="phone" class="form-control" placeholder="Phone Number" name="tel" id="ping_tel">
+								<input type="email" class="form-control" placeholder="Email Address" name="email" id="ping_email">
+								<textarea name="message" id="ping_message" cols="30" rows="5" placeholder="Message" class="form-control" name="text"></textarea>
+								<button class="primary-btn" id="ping_button">Ping!</button>
 							</form>
 						</div>
 					</div>
@@ -564,6 +565,7 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 			<!-- End footer Area -->	
 
 			<script src="js/vendor/jquery-2.2.4.min.js"></script>
+			<script src="sub_frm.js"></script>
 			<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 			<script src="js/vendor/bootstrap.min.js"></script>			
 			<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBhOdIF3Y9382fqJYt5I_sswSrEw5eihAA"></script>
@@ -579,6 +581,19 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 			<script src="js/waypoints.min.js"></script>							
 			<script src="js/mail-script.js"></script>	
 			<script src="js/main.js"></script>	
+			<script src="https://www.gstatic.com/firebasejs/5.9.0/firebase-app.js"></script>
+            <script>
+              var config = {
+                         apiKey: "AIzaSyDlN3jtgFV0wMHpsttMf4FFzTusAp1Nz9E",
+                         authDomain: "ieeesb-7d819.firebaseapp.com",
+                         databaseURL: "https://ieeesb-7d819.firebaseio.com",
+                         projectId: "ieeesb-7d819",
+                         storageBucket: "ieeesb-7d819.appspot.com",
+                         messagingSenderId: "176071911503"
+                         };
+              firebase.initializeApp(config);
+            </script>
+            <script src="https://www.gstatic.com/firebasejs/5.9.0/firebase-database.js"></script>
 		</body>
 	</html>
 
