@@ -2329,7 +2329,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 .banner-area {
-  background: url(../img/header-bg.jpg) center;
+  background: url(../img/backhome.jpg) center;
   background-size: cover;
 }
 
@@ -2615,7 +2615,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 .faq-area {
-  background: url(../img/fact.jpg) center;
+  background: url(../img/team.jpg) center;
   background-size: cover;
 }
 
@@ -2679,13 +2679,13 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 .feedback-area {
-  background: url(../img/feedback-bg.jpg) center;
+  background: url(../img/ins.jpg) center;
   background-size: cover;
 }
 
 .overlay-bg {
-  background-color: #000;
-  opacity: .7;
+  background-color: rgb(30, 99, 126);
+  opacity: .5;
 }
 
 .feedback-left {
