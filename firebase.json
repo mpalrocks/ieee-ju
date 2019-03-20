@@ -5,7 +5,14 @@
       "firebase.json",
       "**/.*",
       "**/node_modules/**"
-    ]
+    ],
+    "rewrites": [ {
+     "source": "**/fun/**",
+     "function": "fun"
+   },{
+     "source": "**/fun",
+     "function": "fun"
+   } ]
   },
   "functions": {
     "predeploy": [

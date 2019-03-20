@@ -1,7 +1,7 @@
 const functions = require('firebase-functions');
 const express = require('express');
 const app=express();
-app.get('/',(req,res)=>{
+app.get('/:fn',(req,res)=>{
 const date = new Date();
 const hours = date.getHours();
 const mins=date.getMinutes();
@@ -21,7 +21,7 @@ const secs=date.getSeconds();
   </html>`);
 });
 
-app.get('/:name',(req,res)=>{
+app.get('/:fn/:name',(req,res)=>{
 const date = new Date();
 const hours = date.getHours();
 const mins=date.getMinutes();
